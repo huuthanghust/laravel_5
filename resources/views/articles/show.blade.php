@@ -21,7 +21,19 @@ Tieu de bai viet
                     
                </div>
           </div>
-         
+          <div class="row">
+               <div class="col-sm-6 col-sm-offset-3">
+                    <a href="{{route('article.edit', $article->id)}}" class="btn btn-info"> Edit</a>
+                    {!! Form::open([
+                        'route'=>['article.delete', $article->id], 'method' => 'DELETE', 
+                         'class' => 'form - inline',
+                         'style' => 'display:inline'
+                       ]) !!}
+                    <button class="btn btn-danger"> Delete</button>
+
+                     {!! Form::close()!!}               
+               </div>
+          </div>
 
      </div>
 @stop

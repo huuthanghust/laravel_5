@@ -24,6 +24,19 @@ Route::post('articles/store',[
 	'as'=> 'article.store',
 	'uses' => 'PagesController@store'
 ]);
+Route::get('articles/{id}/edit',[
+	'as' => 'article.edit',
+	'uses' => 'PagesController@edit'
+]);
+Route::put ('articles/{id}',[
+	'as' => 'article.update',
+	'uses' => 'PagesController@update'
+]);
+
 Route::get('/articles/{id}',[ 
 	'as' => 'article.show',
 	'uses'=>'PagesController@show']);
+Route::delete('/articles/{id}',[
+	'as' => 'article.delete',
+	'uses' => 'PagesController@delete'
+]);

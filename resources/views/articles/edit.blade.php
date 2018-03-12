@@ -1,16 +1,16 @@
 @extends ('layouts.master')
 @section ('head.title')
-Tao moi bai viet
+Chỉnh sửa bài viết 
 @stop
 @section ('body.content')
 <div class="row">
      <div class="col-sm-6 col-sm-offset-3">
 </form>
-    {!! Form::open([
-        'route'=>['article.store'], 'method' => 'POST', 
+    {!! Form::model($article,[
+        'route'=>['article.update',$article->id], 'method' => 'PUT', 
         'class' => 'form - horizontal'
       ]) !!}
-    @include('articles._form', ['button_name' => 'Create'])
+    @include('articles._form', ['button_name' => 'Update'])
     {!! Form::close()!!}
      </div>
     }

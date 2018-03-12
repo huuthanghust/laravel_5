@@ -4,7 +4,7 @@ Danh sach bai viet
 @stop
 @section ('body.content')
      <div class="container">
-          //start 
+          
           @foreach ($articles as $a)
      	<div class="row">
      		<div class="col-sm-6 col-sm-offset-3">
